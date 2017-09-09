@@ -1,0 +1,14 @@
+
+CC=gcc
+OBJ=main.o show.o add.o
+CFLAGS=-g -Wall -O0
+main:$(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o main
+main.o:main.c
+	$(CC) $(CFLAGS) -c  main.c -o main.o
+show.o:show.c
+	$(CC) $(CFLAGS) -c show.c -o show.o
+add.o:add.c
+	$(CC) $(CFLAGS) -c add.c -o add.o
+clean:
+	$(RM)  $(OBJ) main .*.sw? 

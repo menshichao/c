@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(void)
+{
+	char str1[20]="Hello ";
+	char str2[20]="World ";
+
+	int n=strlen(str1);
+	int m=strlen(str2);
+
+	char(*p)[20];
+	
+	int i,j;
+
+	for(i=0;i<n;i++)
+		*p+i=&str1[i];
+	for(i=0;i<m;i++0)
+		*p+n+i=&str2[i];
+
+	for(i=0;i<n+m;i++)
+		printf("%c",*(*p+i));
+
+
+return 0;
+}

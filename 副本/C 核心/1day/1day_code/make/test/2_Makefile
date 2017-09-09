@@ -1,0 +1,10 @@
+main:main.o show.o add.o
+	gcc main.o show.o add.o -o main
+main.o:main.c
+	gcc -c main.c -o main.o
+show.o:show.c
+	gcc -c show.c -o show.o
+add.o:add.c
+	gcc -c add.c -o add.o
+clean:
+	rm  *.o main .*.sw? -rf
